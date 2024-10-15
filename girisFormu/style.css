@@ -1,99 +1,61 @@
-*{
+body{
     margin: 0;
     padding: 0;
+    background: #131034;
 }
-
-.container{
-    background: url(foto.jpg);
-    height: 100vh;
-    background-size: 100% 100%; /*resmi tam ekrana sığdırmak için */
-}
-
-.container .navbar{
-    width: 100%;
-    height: 80px;
-    background: rgba(137, 158, 182, 0.4);
-}
-.navbar ul{
-    float: right;
-    margin-right: 20px;
-
-    
-}
-.navbar .logo{
-    display: inline-block;
-    margin-left: 50px;
-    margin-top: 20px;
-
-}
-.navbar .logo a{
-    text-decoration: none;
-    font-size: 30px;
-    font-family: sans-serif;
-    color: #f3f3f3;
-}
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 8px;
-    line-height: 80px;
-}
-.navbar ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 6px 13px;
-    transition: .5s;
-    
-}
-.navbar ul li a.active,
-.navbar ul li a:hover{
-    background: #ff6e00;
-    border-radius: 2px;
-
-}
-.container .center{
+.signup-form{
+    width: 300px;
+    padding: 20px; /*birbirlerinden 20px uzaklaştırır*/
+    text-align: center; /*ortalar*/
+    background: url(resim.jpg);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: (-50%,-50%);
-    font-family: sans-serif;
-    user-select:none ; /*kopyalanmasın diye*/
-
+    transform: translate(-50%, -50%);
+    overflow: hidden; /*taşmaları engellemek için*/
 }
-.center h1{
-    color: black;
-    font-size: 70px;
-    font-weight: bold;
-    width: 900px;
-    text-align: center;
-    
-}
-.center h2{
+.signup-form h1{
     color: #fff;
-    font-size: 50px;
-    font-weight: bold;
-    width: 885px;
-    margin-top: 10px;
-    text-align: center;
-}
-.center .buttons{
-    margin: 35px 280px ;
-}
-.buttons button{
-    height: 50px;
-    width: 150px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffb3b3;
-    background: rgb(207, 96, 88);
-    border: solid 1px red;
-    cursor: pointer;
-    outline: none;
-    border-radius: 25px;
-    transition: .5s;
+    margin-top: 100px; /*yukarıyla arasını 100 px açar*/
+    font-size: 40px;
 
 }
-.buttons button:hover{
+.signup-form input{
+    display: block;/*alt alta hizalar*/
+    width: 100%;
+    padding: 0 16px;/*üstten alttan 0, sağdan soldan 16px boşluk*/
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;/*tüm kutular eşit hizalandı*/
+    border: none; /*köşeler*/
+}
+.txt{
+    margin: 20px 0;
+    border-radius: 6px; /*köşeleri ovalleştirme*/
+}
+.signup-btn{
+    margin-top: 60px; /*üstle 60px uzaklaşma*/
+    margin-bottom: 20px; /*altla 20px uzaklaşma*/
+    background: #538fef;
+    color: #fff;
+    border-radius: 44px;
+    cursor: pointer; /*faredeki imleci değiştirir*/
+    transition: 0.8s;
+    display: block;
+}
+.signup-btn:hover{
+    transform: scale(0.96);/*fareyi götürünce küçülme olması için*/
     background: #fff;
+    color:#538fef ;
+}
+.signup-form a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    transition: 0.8s;
+    display: block;
+}
+.signup-form a:hover{
+    color: yellow;
 }
